@@ -54,4 +54,5 @@ This project is open-sourced for educational and creative purposes. If you reuse
 
 🙋‍♀️ 
 Made with love by Riyanshi
+
 Feel free to connect or contribute on GitHub 🌟

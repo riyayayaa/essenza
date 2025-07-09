@@ -52,6 +52,6 @@ More artists are continuously being added.
 
 This project is open-sourced for educational and creative purposes. If you reuse it, consider giving credit.
 
-🙋‍♀️ Author
+🙋‍♀️ 
 Made with love by Riyanshi
 Feel free to connect or contribute on GitHub 🌟

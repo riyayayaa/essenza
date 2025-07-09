@@ -48,11 +48,14 @@ More artists are continuously being added.
 - Responsive Design Principles
 - Font: [Wasted Vindey](#)
 
-📄 License
+--- 
+
+## 📄 License
 
 This project is open-sourced for educational and creative purposes. If you reuse it, consider giving credit.
 
-🙋‍♀️ 
-Made with love by Riyanshi
+---
 
-Feel free to connect or contribute on GitHub 🌟
+## 🙋‍♀️ Made with love by Riyanshi
+
+### Feel free to connect or contribute on GitHub 🌟

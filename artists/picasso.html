@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="picasso-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pablo Picasso - essenza</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="picasso-theme">
+  <nav>
+    <a href="../index.html" class="back-button">&lt; Go Back</a>
+    <h1>essenza</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" />
+      <span class="slider">
+        <span class="icon">☀️</span>
+        <span class="icon">🌙</span>
+      </span>
+    </label>
+  </nav>
+
+  <main class="artist-detail-container">
+    <section class="artist-hero">
+      <a href="https://en.wikipedia.org/wiki/Pablo_Picasso" target="_blank">
+        <img src="../images/pablo.jpeg" alt="Pablo Picasso" />
+      </a>
+      <div class="artist-text">
+        <h2>Pablo Picasso</h2>
+        <em>Spanish Painter and Sculptor</em>
+        <p>
+          Pablo Picasso was a revolutionary Spanish artist, co-founder of the Cubist movement and a defining figure of modern art. His vast and varied body of work reflects innovation, rebellion, and social critique, often breaking traditional artistic boundaries.
+        </p>
+      </div>
+    </section>
+
+    <section class="masterwork-section">
+      <h3>Masterwork</h3>
+      <div class="masterwork-content">
+        <img src="../images/guernica.jpeg" alt="Guernica by Picasso" />
+        <div class="work-details">
+          <h4>Guernica (1937)</h4>
+          <p><strong>Medium:</strong> Oil on canvas</p>
+          <p><strong>Dimensions:</strong> 349 cm × 776 cm</p>
+          <p>
+            Guernica is Picasso’s powerful anti-war mural, created in response to the 1937 bombing of the Basque town during the Spanish Civil War. The painting uses distorted figures, monochrome tones, and dramatic symbolism to depict the chaos, pain, and terror of war. It remains one of the most searing visual indictments of violence in art history.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-artworks">
+      <h4><strong>To read more about Pablo Picasso's other artworks</strong></h4>
+      <a href="https://en.wikipedia.org/wiki/List_of_Picasso_paintings_1901%E2%80%931910" class="wiki-link" target="_blank"><strong>CLICK HERE</strong></a>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

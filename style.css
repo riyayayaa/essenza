@@ -1,0 +1,422 @@
+@font-face {
+  font-family: 'WastedVindey';
+  src: url('font/Wasted-Vindey.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg: #fdf6e3;
+  --text: #000000;
+  --card-bg: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card-bg: #1f1f1f;
+}
+
+body,
+nav {
+  transition: background 0.6s ease-in-out, background-color 0.6s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Gradient Nav Header — Light & Dark Mode */
+nav {
+  padding: 20px 20px 40px;
+  text-align: center;
+  position: relative;
+  border: none;
+}
+
+body:not(.dark) {
+  background: linear-gradient(to bottom, white 0%, #d6cba2 30%, #a0522d 100%);
+}
+
+
+body.dark {
+  background: linear-gradient(to bottom, #c0c0c0 0%, #708090 30%, #2f4f4f 100%);
+}
+
+/* Logo Title */
+h1 {
+  font-family: 'WastedVindey', 'Brush Script MT', cursive, sans-serif;
+  font-style: italic;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+/* Search Bar (left corner) */
+.search-container {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.search-container input {
+  padding: 8px 12px 8px 34px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark .search-container input {
+  background-color: #fff;
+  color: #eee;
+  border-color: #444;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+}
+
+/* Dark Mode Toggle (right corner) */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ccc;
+  border-radius: 30px;
+  height: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.slider .icon {
+  font-size: 14px;
+  z-index: 1;
+  pointer-events: none;
+  color: #222;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.switch input:checked + .slider {
+  background-color: #555;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+/* Artist Grid Layout */
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Artist Cards */
+.artist-card {
+  background: var(--card-bg);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.artist-card:hover {
+  transform: scale(1.03);
+}
+
+.artist-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.artist-card h3 {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.artist-role {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0 0;
+}
+.artist-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.artist-detail-container {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.artist-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.artist-hero img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--text);
+}
+
+.artist-text {
+  max-width: 600px;
+}
+
+.artist-text h2 {
+  font-family: 'WastedVindey', cursive;
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+}
+
+.masterwork-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.masterwork-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.masterwork-content img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Fine-tuned sizing for Leonardo's artworks */
+body.leonardo-theme .masterwork-section:nth-of-type(1) img {
+  height: 380px;
+}
+
+body.leonardo-theme .masterwork-section:nth-of-type(2) img {
+  height: 220px;
+  width: 360px;
+}
+
+
+.work-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.work-details h4 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.work-details p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  background-color: transparent;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--accent, #ff4081);
+}
+
+@media (max-width: 768px) {
+  .artist-hero, .masterwork-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .artist-hero img, .masterwork-content img {
+    margin: auto;
+  }
+
+  .artist-text, .work-details {
+    max-width: 100%;
+  }
+}
+
+/* VAN GOGH PAGE GRADIENTS */
+body.vangogh-theme:not(.dark) {
+  background: linear-gradient(to top,#b3d7ff 0%, #fceabb 30%, #fff3e6 100% );
+}
+
+body.vangogh-theme.dark {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+/* Remove solid background on nested containers */
+.artist-page,
+.artist-detail-container {
+  background: transparent;
+}
+
+/* Remove all lines/dividers */
+.more-artworks {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: none; /* removed */
+}
+
+/* Van Gogh gradients (final version) */
+body.vangogh-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fff3e6, #fceabb, #b3d7ff);
+}
+
+body.vangogh-theme.dark {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+/* Apply WastedVindey to artist name */
+.artist-text h2 {
+  font-family: 'WastedVindey', cursive;
+  font-size: 2.4rem;
+  margin: 0 0 8px;
+}
+
+/* Optional: Apply to masterwork title */
+.work-details h4 {
+  font-family: 'WastedVindey', cursive;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+/* Optional: Use on "Masterwork" heading */
+.masterwork-section h3 {
+  font-family: 'WastedVindey', cursive;
+  font-size: 2rem;
+  font-weight: normal;
+}
+/* Leonardo Page Gradients */
+body.leonardo-theme:not(.dark) {
+  background: linear-gradient(to bottom, #ffe9b7, #b9ab6d, #997f4a);
+}
+
+body.leonardo-theme.dark {
+  background: linear-gradient(to bottom, #ab8542, #704a2b, #3a2709);
+}
+body.michelangelo-theme:not(.dark) {
+  background: linear-gradient(to bottom, #f8f1e4, #e8dacd, #c9bdb3);
+}
+
+body.michelangelo-theme.dark {
+  background: linear-gradient(to bottom, #1a1a1a, #3c3c3c, #5e5e5e);
+}
+body.picasso-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fff3f0, #e9e2d0, #c9b6a2);
+}
+
+body.picasso-theme.dark {
+  background: linear-gradient(to bottom, #2c2c2c, #383838, #4a4a4a);
+}
+body.andywarhol-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #ffd6e0);
+}
+
+body.andywarhol-theme.dark {
+  background: linear-gradient(to bottom, #111111, #2a2a2a, #444444);
+}
+body.claudemonet-theme:not(.dark) {
+  background: linear-gradient(to bottom, #f3f9ff, #cde6ff, #a6cfff);
+}
+
+body.claudemonet-theme.dark {
+  background: linear-gradient(to bottom, #1e1e2f, #1b2e40, #163a5c);
+}
+/* REMBRANDT PAGE GRADIENTS */
+body.rijn-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fdf6e3, #e0c9a6, #c2a77d);
+}
+
+body.rijn-theme.dark {
+  background: linear-gradient(to bottom, #9a7e5f, #745332, #883f1e);
+}
+/* KLIMT PAGE GRADIENTS */
+/* KLIMT PAGE GRADIENTS — Inspired by "The Kiss" */
+body.klimt-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fff8dc, #fce5b2, #f2c774, #e8b96a);
+}
+
+body.klimt-theme.dark {
+  background: linear-gradient(to bottom, #3e2f1c, #2b1f13, #1f150d);
+}
+/* FRIDA KAHLO PAGE GRADIENTS — Inspired by "The Two Fridas" */
+body.frida-theme:not(.dark) {
+  background: linear-gradient(to bottom, #ffe6e6, #ffd1d1, #f9baba, #f5a6a6);
+}
+
+body.frida-theme.dark {
+  background: linear-gradient(to bottom, #2d0d0d, #471717, #6b1f1f, #8c2626);
+}
+body.henrimatisse-theme:not(.dark) {
+  background: linear-gradient(to bottom, #fef5e7, #f9d1a1, #e46868);
+}
+
+body.henrimatisse-theme.dark {
+  background: linear-gradient(to bottom, #2a0f1e, #4c2046, #771b3f);
+}

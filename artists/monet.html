@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="claudemonet-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Claude Monet - essenza</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="claudemonet-theme">
+  <nav>
+    <a href="../index.html" class="back-button">&lt; Go Back</a>
+    <h1>essenza</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" />
+      <span class="slider">
+        <span class="icon">☀️</span>
+        <span class="icon">🌙</span>
+      </span>
+    </label>
+  </nav>
+
+  <main class="artist-detail-container">
+    <section class="artist-hero">
+      <a href="https://en.wikipedia.org/wiki/Claude_Monet" target="_blank">
+        <img src="../images/monet.jpeg" alt="Claude Monet" />
+      </a>
+      <div class="artist-text">
+        <h2>Claude Monet</h2>
+        <em>French Impressionist Painter</em>
+        <p>
+          Claude Monet was a pioneering figure of the Impressionist movement, known for his dedication to capturing light and atmosphere in natural scenes. His innovative approach inspired generations of modern artists.
+        </p>
+      </div>
+    </section>
+
+    <section class="masterwork-section">
+      <h3>Masterwork</h3>
+      <div class="masterwork-content">
+        <img src="../images/impression.jpeg" alt="Impression, Sunrise by Claude Monet" />
+        <div class="work-details">
+          <h4>Impression, Sunrise (1872)</h4>
+          <p><strong>Medium:</strong> Oil on canvas</p>
+          <p><strong>Dimensions:</strong> 48 cm × 63 cm</p>
+          <p>
+            "Impression, Sunrise" is the painting that gave name to the Impressionist movement. It depicts the port of Le Havre at sunrise with loose brushwork and an emphasis on light and color. The work broke traditional artistic conventions and emphasized perception and feeling over detail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-artworks">
+      <h4><strong>To read more about Claude Monet’s other artworks</strong></h4>
+      <a href="https://en.wikipedia.org/wiki/List_of_paintings_by_Claude_Monet" class="wiki-link" target="_blank"><strong>CLICK HERE</strong></a>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

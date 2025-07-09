@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="vangogh-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vincent van Gogh - essenza</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="vangogh-theme">
+  <nav>
+    <a href="../index.html" class="back-button">&lt; Go Back</a>
+    <h1>essenza</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" />
+      <span class="slider">
+        <span class="icon">☀️</span>
+        <span class="icon">🌙</span>
+      </span>
+    </label>
+  </nav>
+
+  <main class="artist-detail-container">
+    <section class="artist-hero">
+      <a href="https://en.wikipedia.org/wiki/Vincent_van_Gogh" target="_blank">
+        <img src="../images/vincentvangogh.jpg"
+             alt="Vincent van Gogh" />
+      </a>
+      <div class="artist-text">
+        <h2>Vincent van Gogh</h2>
+        <em>Dutch Post-Impressionist Painter</em>
+        <p>
+          Vincent van Gogh was a Dutch painter famous for his bold color, emotional honesty, and expressive brushwork.
+          He created about 2,100 artworks, including 860 oil paintings, many of which were produced in the last two years of his life.
+        </p>
+      </div>
+    </section>
+
+    <section class="masterwork-section">
+      <h3>Masterwork</h3>
+      <div class="masterwork-content">
+        <img src="../images/starrynight.jpg" alt="The Starry Night" />
+        <div class="work-details">
+          <h4>The Starry Night (1889)</h4>
+          <p><strong>Medium:</strong> Oil on canvas</p>
+          <p><strong>Dimensions:</strong> 73.7 cm × 92.1 cm</p>
+          <p>The Starry Night, often called simply Starry Night, is an oil-on-canvas painting.The painting was created in mid-June 1889, inspired by the view from Van Gogh’s bedroom window at the Saint-Paul-de-Mausole asylum. The former monastery functioned as a mental asylum, where Van Gogh voluntarily admitted himself on May 8, 1889, following a mental breakdown and his infamous act of self-mutilation that occurred in late December 1888.The painting's celestial elements include Venus, which was visible in the sky at the time, though the moon’s depiction is not astronomically accurate. The cypress trees in the foreground were exaggerated in scale compared to other works. Van Gogh's letters suggest he viewed them primarily in aesthetic rather than symbolic terms. The village in the painting is an imaginary addition, based on sketches rather than the actual landscape seen from the asylum.The Starry Night has been subject to various interpretations, ranging from religious symbolism to representations of Van Gogh’s emotional turmoil. Some art historians link the swirling sky to contemporary astronomical discoveries, while others see it as an expression of Van Gogh’s personal struggles. Van Gogh himself was critical of the painting, referring to it as a "failure" in letters to his brother, Theo.Van Gogh depicted the view at different times of the day and under various weather conditions, such as the sunrise, moonrise, sunshine-filled days, overcast days, windy days, and one day with rain. While the hospital staff did not allow Van Gogh to paint in his bedroom, he was able there to make sketches in ink or charcoal on paper; eventually, he would base newer variations on previous versions. The pictorial element uniting all of these paintings is the diagonal line coming in from the right depicting the low rolling hills of the Alpilles mountains. In fifteen of the twenty-one versions, cypress trees are visible beyond the far wall enclosing the wheat field.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-artworks">
+      <h4><strong>To read more about Vincent Van Gogh’s other artworks </strong></h4>
+      <a href="https://en.wikipedia.org/wiki/List_of_works_by_Vincent_van_Gogh" class="wiki-link" target="_blank"><strong> CLICK HERE</strong></a>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

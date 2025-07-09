@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="munch-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edvard Munch - Essenza</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="munch-theme">
+  <nav>
+    <a href="../index.html" class="back-button">&lt; Go Back</a>
+    <h1>essenza</h1>
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" />
+      <span class="slider">
+        <span class="icon">☀️</span>
+        <span class="icon">🌙</span>
+      </span>
+    </label>
+  </nav>
+
+  <main class="artist-detail-container">
+    <section class="artist-hero">
+      <a href="https://en.wikipedia.org/wiki/Edvard_Munch" target="_blank">
+        <img src="../images/edwardmunch.png" alt="Edvard Munch" />
+      </a>
+      <div class="artist-text">
+        <h2>Edvard Munch</h2>
+        <em>Norwegian Expressionist Painter</em>
+        <p>
+          Edvard Munch was a Norwegian painter best known for his intensely emotional and symbolic work. His themes often explored human anxiety, love, and death, laying the groundwork for the Expressionist movement.
+        </p>
+      </div>
+    </section>
+
+    <section class="masterwork-section">
+      <h3>Masterwork</h3>
+      <div class="masterwork-content">
+        <img src="../images/scream.jpeg" alt="The Scream" />
+        <div class="work-details">
+          <h4>The Scream (1893)</h4>
+          <p><strong>Medium:</strong> Oil, tempera, and pastel on cardboard</p>
+          <p><strong>Dimensions:</strong> 91 cm × 73.5 cm</p>
+          <p><strong>Description:</strong><br>
+            “The Scream” is Edvard Munch’s most famous and haunting painting, symbolizing the anxiety of the modern human condition. With swirling colors, a blood-red sky, and a distorted central figure, the painting has become a global icon of existential dread and emotional turmoil.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-artworks">
+      <h4><strong>To read more about Edvard Munch’s other artworks</strong></h4>
+      <a href="https://en.wikipedia.org/wiki/List_of_paintings_by_Edvard_Munch" class="wiki-link" target="_blank"><strong> CLICK HERE</strong></a>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
